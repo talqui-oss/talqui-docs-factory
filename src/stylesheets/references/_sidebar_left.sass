@@ -1,0 +1,35 @@
+// chappe
+//
+// Copyright 2021, Crisp IM SAS
+// Author: Valerian Saliou <valerian@valeriansaliou.name>
+
+#references
+  .panes
+    .sidebar
+      &.sidebar--left
+        .context .context-name .context-icon,
+        .nest .nest-category .nest-icon
+          background-color: var(--color-accent-base)
+          +mask-image-fill
+
+        .nest
+          .nest-category
+            .nest-icon
+              +mask-image-internal("references/sidebar/category-icon-default.svg")
+
+
+//- Media Queries
+
+// For screens below defined widths
+
+@media screen and (max-width: $screen-small-width-breakpoint)
+  #references
+    .panes
+      .sidebar-toggler
+        margin-top: 26px
+
+@media screen and (max-width: $screen-tiny-width-breakpoint)
+  #references
+    .panes
+      .sidebar-toggler
+        margin-top: 15px

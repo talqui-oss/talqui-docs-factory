@@ -1,0 +1,16 @@
+//- chappe
+//-
+//- Copyright 2021, Crisp IM SAS
+//- Author: Valerian Saliou <valerian@valeriansaliou.name>
+
+include ../_mixins
+
+.sidebar.sidebar--left
+  span.sidebar-toggler-retract
+
+  - var guides_base = ((guides[0] || {}).subtrees || []);
+
+  each category in guides_base
+    +nest("guides", category, guide.id)
+
++sidebar-toggler

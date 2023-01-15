@@ -1,0 +1,103 @@
+{
+  "name": "chappe",
+  "description": "Developer Docs builder. Write guides in Markdown and references in API Blueprint. Comes with a built-in search engine.",
+  "version": "1.7.1",
+  "homepage": "https://github.com/crisp-oss/chappe",
+  "license": "MIT",
+  "bin": {
+    "chappe": "bin/chappe.js"
+  },
+  "author": {
+    "name": "Valerian Saliou",
+    "email": "valerian@valeriansaliou.name",
+    "url": "https://valeriansaliou.name/"
+  },
+  "contributors": [
+    {
+      "name": "Baptiste Jamin",
+      "url": "https://jam.in/"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/crisp-oss/chappe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/crisp-oss/chappe/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/crisp-oss/chappe/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">= 12.0.0"
+  },
+  "scripts": {
+    "dev": "./bin/chappe.js serve --example=acme-docs",
+    "build": "./bin/chappe.js build --example=acme-docs",
+    "test": "./bin/chappe.js lint --example=acme-docs"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "6.9.x",
+    "ora": "5.4.x",
+    "del": "6.0.x",
+    "glob": "7.2.x",
+    "compass-importer": "0.4.x",
+    "node-sass": "7.0.x",
+    "gulp": "4.0.x",
+    "gulp-connect": "5.7.x",
+    "gulp-bower": "0.0.15",
+    "gulp-file": "0.4.x",
+    "gulp-jade": "1.1.x",
+    "gulp-babel": "6.1.x",
+    "gulp-sass-variables": "1.2.x",
+    "gulp-sitemap": "8.0.x",
+    "gulp-inline-image": "1.0.x",
+    "gulp-concat": "2.6.x",
+    "gulp-cssmin": "0.2.x",
+    "gulp-uglify": "3.0.x",
+    "gulp-header": "2.0.x",
+    "gulp-rename": "2.0.x",
+    "gulp-replace": "1.1.x",
+    "gulp-pug-lint": "0.1.x",
+    "gulp-sass-lint": "1.4.x",
+    "gulp-jshint": "2.1.x",
+    "gulp-jscs": "4.1.x",
+    "gulp-sizereport": "1.2.x",
+    "gulp-notify": "4.0.x",
+    "jshint": "2.13.x",
+    "marked": "4.0.x",
+    "markdown-toc": "1.2.x",
+    "drafter": "2.0.x",
+    "feed": "4.2.x",
+    "minisearch": "3.1.x",
+    "slug": "5.2.x",
+    "trunc-text": "1.0.x",
+    "escape-html": "1.0.x",
+    "http-status-codes": "2.2.x",
+    "merge-stream": "2.0.x",
+    "lodash": "4.17.x",
+    "yargs": "4.8.x",
+    "@tommoor/remove-markdown": "0.3.x"
+  },
+  "keywords": [
+    "docs",
+    "documentation",
+    "api-documentation",
+    "documentation-tool",
+    "docs-generator",
+    "developer-documentation",
+    "developer-tool",
+    "markdown",
+    "blueprint",
+    "developer",
+    "api-rest",
+    "github-pages",
+    "cloudflare-pages"
+  ],
+  "devDependencies": {
+    "gulp-sass": "^5.1.0"
+  }
+}
