@@ -46,10 +46,16 @@
                         | #{subitem.label}
 
               else
-                a.menu-link.font-sans-semibold(
-                  href="#{item_href}"
-                )
-                  | #{item.label}
+                if typeof item.href === 'string'
+                  a.menu-link.font-sans-semibold(
+                    href="#{item.href}"
+                  )
+                    | #{item.label}
+                else
+                  a.menu-link.font-sans-semibold(
+                    href="#{item_href}"
+                  )
+                    | #{item.label}
 
     .right
       ul.extras
