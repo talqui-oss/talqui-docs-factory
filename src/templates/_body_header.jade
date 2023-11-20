@@ -33,10 +33,17 @@
 
                 .dropdown
                   each subitem in item.dropdown
-                    a.dropdown-link(
-                      href="#{item_href}#{subitem.route.join('/')}/"
-                    )
-                      | #{subitem.label}
+                    if typeof subitem.href === 'string'
+                      a.dropdown-link(
+                        href="#{subitem.href}"
+                        target="_blank"
+                      )
+                        | #{subitem.label}
+                    else
+                      a.dropdown-link(
+                        href="#{item_href}#{subitem.route.join('/')}/"
+                      )
+                        | #{subitem.label}
 
               else
                 a.menu-link.font-sans-semibold(
