@@ -2,33 +2,22 @@
   "name": "chappe",
   "description": "Developer Docs builder. Write guides in Markdown and references in API Blueprint. Comes with a built-in search engine.",
   "version": "1.7.1",
-  "homepage": "https://github.com/crisp-oss/chappe",
+  "homepage": "https://github.com/talqui-oss/talqui-docs-factory",
   "license": "MIT",
   "bin": {
     "chappe": "bin/chappe.js"
   },
-  "author": {
-    "name": "Valerian Saliou",
-    "email": "valerian@valeriansaliou.name",
-    "url": "https://valeriansaliou.name/"
-  },
-  "contributors": [
-    {
-      "name": "Baptiste Jamin",
-      "url": "https://jam.in/"
-    }
-  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/crisp-oss/chappe.git"
+    "url": "git://github.com/talqui-oss/talqui-docs-factory.git"
   },
   "bugs": {
-    "url": "https://github.com/crisp-oss/chappe/issues"
+    "url": "https://github.com/talqui-oss/talqui-docs-factory/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/crisp-oss/chappe/blob/master/LICENSE"
+      "url": "https://github.com/talqui-oss/talqui-docs-factory/blob/master/LICENSE"
     }
   ],
   "engines": {
