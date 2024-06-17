@@ -14,6 +14,17 @@
   "bugs": {
     "url": "https://github.com/talqui-oss/talqui-docs-factory/issues"
   },
+  "author": {
+    "name": "Talqui Developer",
+    "email": "developer@talqui.com",
+    "url": "https://talqui.chat"
+  },
+  "contributors": [
+    {
+      "name": "Talqui Contributor",
+      "url": "https://talqui.chat"
+    }
+  ],
   "licenses": [
     {
       "type": "MIT",
