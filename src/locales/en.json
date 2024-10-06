@@ -56,8 +56,8 @@
     "LABEL" : "Read guides and browse references.",
 
     "BULLETPOINTS" : {
-      "QUICKSTART" : "Get Started",
-      "GUIDES"     : "Guides",
+      "QUICKSTART" : "User Wiki",
+      "GUIDES"     : "Developer Guide",
       "REFERENCES" : "References"
     },
 

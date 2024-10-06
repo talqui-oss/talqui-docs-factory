@@ -33,12 +33,13 @@ block append javascripts
       if bulletpoint[2] && bulletpoint[2].length > 0
         each action, action_index in bulletpoint[2]
           - var is_last = ((bulletpoint_index === (bulletpoints.length - 1)) && (action_index === (bulletpoint[2].length - 1)));
+          - var external_link = typeof action.href === 'string' ? action.href : SITE.urls.base + '/'+ action.route.join('/');
 
           | {
           |       "@type": "ListItem",
           |       "position": #{(++last_position)},
           |       "name": "#{action.label}",
-          |       "item": "#{SITE.urls.base}/#{action.route.join('/')}/"
+          |       "item": "#{external_link}"
           |     }#{((is_last === true) ? "" : ", ")}
 
     | ]
@@ -86,11 +87,19 @@ block body_content
             if bulletpoint[2] && bulletpoint[2].length > 0
               .bulletpoint-actions
                 each action in bulletpoint[2]
-                  a.bulletpoint-action.font-sans-semibold(
-                    href="/#{action.route.join('/')}/",
-                    class=((bulletpoint[2].length === 1) ? "bulletpoint-action--single" : null)
-                  )
-                    | #{action.label}
+                  if typeof action.href === 'string'
+                    a.bulletpoint-action.font-sans-semibold(
+                      href="#{action.href}",
+                      target="_blank"
+                      class=((bulletpoint[2].length === 1) ? "bulletpoint-action--single" : null)
+                    )
+                      | #{action.label}
+                  else if typeof action.route === 'object'
+                    a.bulletpoint-action.font-sans-semibold(
+                      href="/#{action.route.join('/')}/",
+                      class=((bulletpoint[2].length === 1) ? "bulletpoint-action--single" : null)
+                    )
+                      | #{action.label}
 
       if SITE.tokens.crisp_website_id
         .support
